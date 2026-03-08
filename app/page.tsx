@@ -3,7 +3,8 @@ export const dynamic = 'force-dynamic';
 import Dashboard from '../components/Dashboard';
 
 async function getProducts() {
-const response = await fetch('', { cache: 'no-store' });
+// We are giving Vercel the exact, undeniable web address right here:
+const response = await fetch('');
 
 if (!response.ok) {
 throw new Error('Failed to fetch products');
